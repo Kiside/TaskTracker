@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TaskTracker.DTOs;
 using TaskTracker.Models;
 
 namespace TaskTracker.Services
@@ -7,9 +8,9 @@ namespace TaskTracker.Services
     {
         Task<List<TaskItem>> GetTasks();
         
-        Task<TaskItem> GetTaskById(int id);
+        Task<TaskItem?> GetTaskById(int id);
 
-        Task<TaskItem> CreateTask(TaskItem task);
+        Task<TaskItem> CreateTask(CreateTaskItemRequest task);
 
         Task<bool> DeleteTask(int id);
 

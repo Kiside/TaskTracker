@@ -29,7 +29,7 @@
     "Parameters": [
       {
         "Name": "task",
-        "Type": "TaskTracker.Models.TaskItem",
+        "Type": "TaskTracker.DTOs.CreateTaskItemRequest",
         "IsRequired": true
       }
     ],
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "TaskTracker.Models.TaskItem",
+        "Type": "TaskTracker.DTOs.TaskItemResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

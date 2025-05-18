@@ -2,6 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using TaskTracker.Data;
 using TaskTracker.Models;
+using TaskTracker.Services;
+using TaskTracker.DTOs;
+using Mapster;
 
 namespace TaskTracker.Controllers
 {
@@ -9,43 +12,43 @@ namespace TaskTracker.Controllers
     [Route("api/[controller]")]
     public class TaskController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly TaskService _taskService;
 
-        public TaskController(AppDbContext context)
+        public TaskController(TaskService taskService)
         {
-            _context = context;
+            _taskService = taskService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TaskItem>>> GetTasks()
         {
-            return await _context.Tasks.ToListAsync();
+            var tasks = await _taskService.GetTasks();
+            return Ok(tasks);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<TaskItem>> GetTask(int id)
+        public async Task<ActionResult<TaskItemResponse>> GetTask(int id)
         {
-            var task = await _context.Tasks.FindAsync(id);
+            var task = await _taskService.GetTaskById(id);
 
-            if (task == null)
+            if (task != null)
             {
-                return NotFound();
+                var response = task.Adapt<TaskItemResponse>();
+                return Ok(response);
             }
 
-            return task;
+            return NotFound();
         }
 
         [HttpPost]
-        public async Task<ActionResult<TaskItem>> PostTask(TaskItem task)
+        public async Task<ActionResult<TaskItem>> PostTask(CreateTaskItemRequest task)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            _context.Tasks.Add(task);
+            var createdTask = await _taskService.CreateTask(task);
 
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetTask), new { id = task.Id }, task);
+            return CreatedAtAction(nameof(GetTask), new {id = createdTask.Id}, task);
         }
 
         [HttpPut("{id}")]
@@ -54,21 +57,9 @@ namespace TaskTracker.Controllers
             if (id != task.Id)
                 return BadRequest();
 
-            _context.Entry(task).State = EntityState.Modified;
+            var success = await _taskService.UpdateTask(id, task);
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                if (!_context.Tasks.Any(e => e.Id == id))
-                    return NotFound();
-                else
-                    throw;
-            }
-
-            return NoContent();
+            return success ? NoContent() : NotFound();
 
         }
 
@@ -76,16 +67,9 @@ namespace TaskTracker.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTask(int id)
         {
-            var task = await _context.Tasks.FindAsync(id);
-            if (task == null)
-            {
-                return NotFound();
-            }
+            var success = await _taskService.DeleteTask(id);
 
-            _context.Tasks.Remove(task);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            return success ? NoContent() : NotFound();
         }
     }
 }

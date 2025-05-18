@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Mapster;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TaskTracker.Data;
+using TaskTracker.DTOs;
 using TaskTracker.Models;
 
 namespace TaskTracker.Services
@@ -14,8 +16,10 @@ namespace TaskTracker.Services
             _context = context;
         }
 
-        public async Task<TaskItem> CreateTask(TaskItem task)
+        public async Task<TaskItem> CreateTask(CreateTaskItemRequest taskRequest)
         {
+            var task = taskRequest.Adapt<TaskItem>();
+
             _context.Tasks.Add(task);
 
             await _context.SaveChangesAsync();
@@ -28,9 +32,8 @@ namespace TaskTracker.Services
 
             if (task == null) return false;
 
-            _context.Tasks.Remove(task);
-            await _context.SaveChangesAsync();
-            return true;
+            var result = await _context.Tasks.Where(t => t.Id == id).ExecuteDeleteAsync();
+            return result > 0;
         }
 
         public async Task<TaskItem?> GetTaskById(int id)
@@ -47,10 +50,10 @@ namespace TaskTracker.Services
         {
             if (id != updateTask.Id) return false;
 
-            _context.Entry(updateTask).State = EntityState.Modified;
+            _context.Tasks.Update(updateTask);
 
-            await _context.SaveChangesAsync();
-            return true;
+            var result = await _context.SaveChangesAsync();
+            return result > 0 ? true : false;
         }
     }
 }

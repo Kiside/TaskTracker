@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Antonio\\PFocus\\TaskTracker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|d:\\antonio\\pfocus\\tasktracker\\tasktracker\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|solutionrelative:tasktracker\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|d:\\antonio\\pfocus\\tasktracker\\tasktracker\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|solutionrelative:tasktracker\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|d:\\antonio\\pfocus\\tasktracker\\tasktracker\\dtos\\taskitemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|solutionrelative:tasktracker\\dtos\\taskitemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|d:\\antonio\\pfocus\\tasktracker\\tasktracker\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|solutionrelative:tasktracker\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|d:\\antonio\\pfocus\\tasktracker\\tasktracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|solutionrelative:tasktracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|d:\\antonio\\pfocus\\tasktracker\\tasktracker\\dtos\\createtaskitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|solutionrelative:tasktracker\\dtos\\createtaskitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|d:\\antonio\\pfocus\\tasktracker\\tasktracker\\services\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|solutionrelative:tasktracker\\services\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskItemResponse.cs",
+              "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\DTOs\\TaskItemResponse.cs",
+              "RelativeDocumentMoniker": "TaskTracker\\DTOs\\TaskItemResponse.cs",
+              "ToolTip": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\DTOs\\TaskItemResponse.cs",
+              "RelativeToolTip": "TaskTracker\\DTOs\\TaskItemResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T14:45:34.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ITaskService.cs",
+              "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Services\\ITaskService.cs",
+              "RelativeDocumentMoniker": "TaskTracker\\Services\\ITaskService.cs",
+              "ToolTip": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Services\\ITaskService.cs",
+              "RelativeToolTip": "TaskTracker\\Services\\ITaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T14:38:38.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateTaskItemRequest.cs",
+              "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\DTOs\\CreateTaskItemRequest.cs",
+              "RelativeDocumentMoniker": "TaskTracker\\DTOs\\CreateTaskItemRequest.cs",
+              "ToolTip": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\DTOs\\CreateTaskItemRequest.cs",
+              "RelativeToolTip": "TaskTracker\\DTOs\\CreateTaskItemRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T14:16:29.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskItem.cs",
+              "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Models\\TaskItem.cs",
+              "RelativeDocumentMoniker": "TaskTracker\\Models\\TaskItem.cs",
+              "ToolTip": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Models\\TaskItem.cs",
+              "RelativeToolTip": "TaskTracker\\Models\\TaskItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T14:05:57.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Program.cs",
+              "RelativeDocumentMoniker": "TaskTracker\\Program.cs",
+              "ToolTip": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Program.cs",
+              "RelativeToolTip": "TaskTracker\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T13:42:13.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "TaskTracker\\Controllers\\TaskController.cs",
+              "ToolTip": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "TaskTracker\\Controllers\\TaskController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T11:29:02.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Services\\TaskService.cs",
+              "RelativeDocumentMoniker": "TaskTracker\\Services\\TaskService.cs",
+              "ToolTip": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Services\\TaskService.cs",
+              "RelativeToolTip": "TaskTracker\\Services\\TaskService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwCYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T10:45:00.361Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

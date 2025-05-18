@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TaskTracker.Data;
 using TaskTracker.Middleware;
+using TaskTracker.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=tasktracker.db"));
+
+builder.Services.AddScoped<TaskService>();
 
 var app = builder.Build();
 
@@ -23,7 +27,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseMiddleware<ErrorHandlingMiddleware>();
-app.UseMiddleware<LoggingRequestMiddleware>();
+//app.UseMiddleware<LoggingRequestMiddleware>();
 
 app.UseHttpsRedirection();
 

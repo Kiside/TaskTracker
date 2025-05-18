@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ABB_1\\OneDrive\\Documenti\\GitHub\\TaskList Project\\TaskTracker\\TaskTracker\\TaskTracker.csproj": {}
+    "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\TaskTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ABB_1\\OneDrive\\Documenti\\GitHub\\TaskList Project\\TaskTracker\\TaskTracker\\TaskTracker.csproj": {
+    "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\TaskTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ABB_1\\OneDrive\\Documenti\\GitHub\\TaskList Project\\TaskTracker\\TaskTracker\\TaskTracker.csproj",
+        "projectUniqueName": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\TaskTracker.csproj",
         "projectName": "TaskTracker",
-        "projectPath": "C:\\Users\\ABB_1\\OneDrive\\Documenti\\GitHub\\TaskList Project\\TaskTracker\\TaskTracker\\TaskTracker.csproj",
+        "projectPath": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\TaskTracker.csproj",
         "packagesPath": "C:\\Users\\ABB_1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ABB_1\\OneDrive\\Documenti\\GitHub\\TaskList Project\\TaskTracker\\TaskTracker\\obj\\",
+        "outputPath": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,12 +45,16 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.4, )"
@@ -88,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
