@@ -5,6 +5,8 @@ using TaskTracker.Models;
 using TaskTracker.Services;
 using TaskTracker.DTOs;
 using Mapster;
+using TaskTracker.Common;
+using TaskTracker.Exstensions;
 
 namespace TaskTracker.Controllers
 {
@@ -23,7 +25,7 @@ namespace TaskTracker.Controllers
         public async Task<ActionResult<IEnumerable<TaskItem>>> GetTasks()
         {
             var tasks = await _taskService.GetTasks();
-            return Ok(tasks);
+            return Ok(ApiResponse<List<TaskItem>>.Success(tasks, "Tasks returned"));
         }
 
         [HttpGet("{id}")]
@@ -34,32 +36,33 @@ namespace TaskTracker.Controllers
             if (task != null)
             {
                 var response = task.Adapt<TaskItemResponse>();
-                return Ok(response);
+                return Ok(ApiResponse<TaskItemResponse>.Success(response, "Task returned"));
             }
 
-            return NotFound();
+            return NotFound(ApiResponse<TaskItemResponse>.NotFound("Task not found"));
         }
 
         [HttpPost]
         public async Task<ActionResult<TaskItem>> PostTask(CreateTaskItemRequest task)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+                return this.ValidationError(ModelState, "Bad Request");
 
             var createdTask = await _taskService.CreateTask(task);
 
-            return CreatedAtAction(nameof(GetTask), new {id = createdTask.Id}, task);
+            var response = ApiResponse<CreateTaskItemRequest>.Created(task, "Task created succesfully");
+            return CreatedAtAction(nameof(GetTask), new {id = createdTask.Id}, response);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTask(int id, TaskItem task)
         {
             if (id != task.Id)
-                return BadRequest();
+                return BadRequest(ApiResponse<object>.BadRequest("ID in route does not match ID in body."));
 
             var success = await _taskService.UpdateTask(id, task);
 
-            return success ? NoContent() : NotFound();
+            return success ? NoContent() : NotFound(ApiResponse<object>.NotFound("Task not found"));
 
         }
 
@@ -69,7 +72,7 @@ namespace TaskTracker.Controllers
         {
             var success = await _taskService.DeleteTask(id);
 
-            return success ? NoContent() : NotFound();
+            return success ? NoContent() : NotFound(ApiResponse<object>.NotFound("Task not found"));
         }
     }
 }
