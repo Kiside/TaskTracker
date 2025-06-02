@@ -17,6 +17,17 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data S
 
 builder.Services.AddScoped<TaskService>();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "Task Tracker API",
+        Version = "v1",
+        Description = "API per la gestione di task"
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
