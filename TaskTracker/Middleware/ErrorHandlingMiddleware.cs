@@ -1,4 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
+using System.Net;
+using System.Text.Json;
+using TaskTracker.Common;
 using TaskTracker.Exceptions;
 
 namespace TaskTracker.Middleware
@@ -26,7 +30,7 @@ namespace TaskTracker.Middleware
 
                 context.Response.ContentType = "application/json";
 
-                context.Response.StatusCode = ex switch
+                var sCode = ex switch
                 {
                     KeyNotFoundException => StatusCodes.Status404NotFound,
                     UnauthorizedAccessException => StatusCodes.Status401Unauthorized,
@@ -36,14 +40,15 @@ namespace TaskTracker.Middleware
                     _ => StatusCodes.Status500InternalServerError
                 };
 
-                var response = new
-                {
-                    error = ex.Message,
-                    type = ex.GetType().Name,
-                    status = context.Response.StatusCode,
-                };
+                var apiResponse =  ApiResponse<string>.Response(
+                    data: null,
+                    statusCode: (HttpStatusCode) sCode,
+                    message: ex.Message
+                    );
 
-                await context.Response.WriteAsJsonAsync(response);
+                var json = JsonSerializer.Serialize(apiResponse);
+
+                await context.Response.WriteAsJsonAsync(json);
             }
 
         }

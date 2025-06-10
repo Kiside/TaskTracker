@@ -21,6 +21,7 @@ namespace TaskTracker.Controllers
             _taskService = taskService;
         }
 
+        [ProducesResponseType(typeof(ApiResponse<List<TaskItem>>), StatusCodes.Status200OK)]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TaskItem>>> GetTasks()
         {
@@ -28,6 +29,8 @@ namespace TaskTracker.Controllers
             return Ok(ApiResponse<List<TaskItem>>.Success(tasks, "Tasks returned"));
         }
 
+        [ProducesResponseType(typeof(ApiResponse<TaskItemResponse>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse<TaskItemResponse>), StatusCodes.Status404NotFound)]
         [HttpGet("{id}")]
         public async Task<ActionResult<TaskItemResponse>> GetTask(int id)
         {
@@ -42,6 +45,7 @@ namespace TaskTracker.Controllers
             return NotFound(ApiResponse<TaskItemResponse>.NotFound("Task not found"));
         }
 
+        [ProducesResponseType(typeof(ApiResponse<CreateTaskItemRequest>), StatusCodes.Status201Created)]
         [HttpPost]
         public async Task<ActionResult<TaskItem>> PostTask(CreateTaskItemRequest task)
         {
@@ -54,6 +58,9 @@ namespace TaskTracker.Controllers
             return CreatedAtAction(nameof(GetTask), new {id = createdTask.Id}, response);
         }
 
+        [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTask(int id, TaskItem task)
         {
@@ -66,7 +73,8 @@ namespace TaskTracker.Controllers
 
         }
 
-
+        [ProducesResponseType(typeof(object), StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTask(int id)
         {

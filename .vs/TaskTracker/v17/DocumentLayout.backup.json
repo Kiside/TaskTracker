@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Antonio\\PFocus\\TaskTracker\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|d:\\antonio\\pfocus\\tasktracker\\tasktracker\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|solutionrelative:tasktracker\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|d:\\antonio\\pfocus\\tasktracker\\tasktracker\\middleware\\loggingrequestmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8735B1D9-E067-4EAB-91D6-B45B816C8F63}|TaskTracker\\TaskTracker.csproj|solutionrelative:tasktracker\\middleware\\loggingrequestmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,6 +55,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Common\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "TaskTracker\\Common\\ApiResponse.cs",
+              "ToolTip": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Common\\ApiResponse.cs",
+              "RelativeToolTip": "TaskTracker\\Common\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T14:49:46.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "LoggingRequestMiddleware.cs",
               "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Middleware\\LoggingRequestMiddleware.cs",
               "RelativeDocumentMoniker": "TaskTracker\\Middleware\\LoggingRequestMiddleware.cs",
@@ -63,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TaskItemResponse.cs",
               "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\DTOs\\TaskItemResponse.cs",
               "RelativeDocumentMoniker": "TaskTracker\\DTOs\\TaskItemResponse.cs",
@@ -76,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ITaskService.cs",
               "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Services\\ITaskService.cs",
               "RelativeDocumentMoniker": "TaskTracker\\Services\\ITaskService.cs",
@@ -88,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CreateTaskItemRequest.cs",
               "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\DTOs\\CreateTaskItemRequest.cs",
               "RelativeDocumentMoniker": "TaskTracker\\DTOs\\CreateTaskItemRequest.cs",
@@ -101,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TaskItem.cs",
               "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Models\\TaskItem.cs",
               "RelativeDocumentMoniker": "TaskTracker\\Models\\TaskItem.cs",
@@ -114,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Program.cs",
               "RelativeDocumentMoniker": "TaskTracker\\Program.cs",
@@ -127,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TaskController.cs",
               "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Controllers\\TaskController.cs",
               "RelativeDocumentMoniker": "TaskTracker\\Controllers\\TaskController.cs",
@@ -140,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TaskService.cs",
               "DocumentMoniker": "D:\\Antonio\\PFocus\\TaskTracker\\TaskTracker\\Services\\TaskService.cs",
               "RelativeDocumentMoniker": "TaskTracker\\Services\\TaskService.cs",
